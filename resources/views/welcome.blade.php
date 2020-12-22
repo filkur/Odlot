@@ -77,7 +77,7 @@
                                    </ol>
                                    <div class="carousel-inner">
                                        <div class="carousel-item active">
-                                           <img src="{{url('/img/slider1.jpg')}}" class="d-block w-100" alt="image1">
+                                           <img src="{{url('/img/slider1.jpg')}}" class="d-block w-100" alt="image1" style="border-radius: 10px;">
                                            <div class="carousel-caption d-none d-md-block">
                                                <h2>Kup bilet lotniczy</h2>
                                                <p>i skorzystaj z najlepszych linii lotniczych</p>
@@ -85,7 +85,7 @@
 
                                        </div>
                                        <div class="carousel-item">
-                                           <img src="{{url('/img/slider2.jpg')}}" class="d-block w-100" alt="image1">
+                                           <img src="{{url('/img/slider2.jpg')}}" class="d-block w-100" alt="image2" style="border-radius: 10px;">
                                            <div class="carousel-caption d-none d-md-block">
                                                <h2>Wybierz klase lotu</h2>
                                                <p>i odpoczywaj w czasie podróży</p>
@@ -93,7 +93,7 @@
 
                                        </div>
                                        <div class="carousel-item">
-                                           <img src="{{url('/img/slider3.jpg')}}" class="d-block w-100" alt="image1">
+                                           <img src="{{url('/img/slider3.jpg')}}" class="d-block w-100" alt="image3" style="border-radius: 10px;">
                                            <div class="carousel-caption d-none d-md-block">
                                                <h2>Wykup dodatkowe ubezpieczenie</h2>
                                                <p>dbaj o Siebie i innych!</p>

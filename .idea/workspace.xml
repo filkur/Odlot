@@ -20,12 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3c16f4-e089-4723-ad1c-974456046d05" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/img/airport.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/airport2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/panorama.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/slider1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/slider2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/slider3.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
@@ -190,7 +184,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608549811870</updated>
       <workItem from="1608549815090" duration="14357000" />
-      <workItem from="1608655091924" duration="9450000" />
+      <workItem from="1608655091924" duration="9719000" />
     </task>
     <servers />
   </component>
