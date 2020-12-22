@@ -24,14 +24,23 @@
                 margin-left: 20px;
                 border-radius: 40px;
             }
+
+            .container{
+                font-family: Bahnschrift;
+            }
+
+
         </style>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     </head>
     <body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
         <div class="container-fluid" >
             <header>
-                <nav class="navbar col-sm-border">
+                <nav class="navbar">
                     <div class="container-fluid">
                             <a class="navbar-brand" href="#">
                                 <img src="{{ asset('img/logo.JPG') }}" alt="" width="450" height="220" class="d-inline-block align-top">
@@ -55,12 +64,57 @@
                     </div>
                 </nav>
             </header>
-            <div class="container">
-                <h2>Lorem ipsum</h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ultrices justo et eleifend laoreet. Pellentesque sit amet pulvinar ipsum. Etiam vitae lacinia tellus. Curabitur tincidunt, felis eu finibus consequat, justo lacus mattis dolor, sed iaculis odio arcu nec velit. Curabitur egestas, tellus at volutpat elementum, urna tortor porta neque, sed lobortis orci purus id est. Integer condimentum, erat quis lobortis pulvinar, ante tellus fermentum erat, vitae fermentum risus mauris vitae elit. Duis eu sapien purus. Morbi nec consectetur eros. Maecenas nec aliquet magna. Aliquam ipsum tortor, volutpat at risus ac, fermentum ultrices ligula. Nam blandit, massa id vulputate ornare, arcu est ornare tellus, et sollicitudin leo elit non neque.
+            <main>
+                <article>
+                    <div class="container">
+                        <div class="row">
+                           <div id="firstContent">
+                               <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                   <ol class="carousel-indicators">
+                                       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                   </ol>
+                                   <div class="carousel-inner">
+                                       <div class="carousel-item active">
+                                           <img src="{{url('/img/slider1.jpg')}}" class="d-block w-100" alt="image1">
+                                           <div class="carousel-caption d-none d-md-block">
+                                               <h2>Kup bilet lotniczy</h2>
+                                               <p>i skorzystaj z najlepszych linii lotniczych</p>
+                                           </div>
 
-                Duis tristique massa magna, accumsan tristique dui viverra at. Ut dictum tellus et metus scelerisque, vitae condimentum odio sodales. Phasellus molestie ante a tincidunt commodo. Donec vel dictum leo. Nunc non sem orci. Curabitur mollis massa sit amet nibh scelerisque scelerisque. Curabitur iaculis porta porta.
-            </div>
+                                       </div>
+                                       <div class="carousel-item">
+                                           <img src="{{url('/img/slider2.jpg')}}" class="d-block w-100" alt="image1">
+                                           <div class="carousel-caption d-none d-md-block">
+                                               <h2>Wybierz klase lotu</h2>
+                                               <p>i odpoczywaj w czasie podróży</p>
+                                           </div>
+
+                                       </div>
+                                       <div class="carousel-item">
+                                           <img src="{{url('/img/slider3.jpg')}}" class="d-block w-100" alt="image1">
+                                           <div class="carousel-caption d-none d-md-block">
+                                               <h2>Wykup dodatkowe ubezpieczenie</h2>
+                                               <p>dbaj o Siebie i innych!</p>
+                                           </div>
+
+                                       </div>
+                                   </div>
+                                   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                       <span class="sr-only"></span>
+                                   </a>
+                                   <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                       <span class="sr-only"></span>
+                                   </a>
+                               </div>
+                           </div>
+                        </div>
+                    </div>
+                </article>
+            </main>
         </div>
     </body>
 </html>
