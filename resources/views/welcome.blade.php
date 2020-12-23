@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Odlot.pl</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://    fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
 
         <!-- Styles -->
         <style>
@@ -29,6 +29,10 @@
                 font-family: Bahnschrift;
             }
 
+            main {
+                background: linear-gradient(#ffffff,rgba(44,77,223,0));
+            }
+
 
         </style>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -42,14 +46,15 @@
             <header>
                 <nav class="navbar">
                     <div class="container-fluid">
-                            <a class="navbar-brand" href="#">
-                                <img src="{{ asset('img/logo.JPG') }}" alt="" width="450" height="220" class="d-inline-block align-top">
-                            </a>
+                        <a class="navbar-brand"  href="#"><img class="img-fluid" src="{{url('/img/haslo.png')}}" alt="haslo"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
 
                         <ul class="nav justify-content-end">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Aktualności</a>
+                                <a class="nav-link" href="#">O nas</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Kontakt</a>
@@ -111,6 +116,81 @@
                                    </a>
                                </div>
                            </div>
+                        </div>
+                        <div class="row" style="text-align: center; margin-top: 120px;" >
+                            <section>
+                                <header> <h2>Witamy na naszej pierwszej oficjalnej stronie ODLOT.PL</h2></header>
+                                <p>Strona ta powstała z myślą o tych, którzy uwielbiają podróżować po Polsce oraz po świecie.
+                                To co nasz różni od innych jest fakt, że u nas zawsze można liczyć na  korzystne oferty oraz promocje.
+                                Dodatkowo, u nas możesz wykupić ubezpieczenie na podróż, a nawet zarezerwować samochód w jednej z naszych wypożyczalni!</p>
+                            </section>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-md-4 mb-5">
+                                <div class="card h-100">
+                                    <img class="card-img-top" src="{{url('/img/adult.jpg')}}" alt="image4">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Troska</h4>
+                                        <p class="card-text">Bezpieczeństwo podróży jest naszym priorytetem, dlatego wprowadziliśmy pakiet ubezpieczeń</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-5">
+                                <div class="card h-100">
+                                    <img class="card-img-top" src="{{url('/img/happy.jpg')}}" alt="">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Radość</h4>
+                                        <p class="card-text">Dobre rekomendacje klientów oraz oceny motywują nas w rozwoju projektu oraz są prawdziwym wynikiem naszej pracy</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-5">
+                                <div class="card h-100">
+                                    <img class="card-img-top" src="{{url('/img/person.jpg')}}" alt="">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Szczęście</h4>
+                                        <p class="card-text">Zadowolilśmy już ponad 100 tysięcy klientów. Następny możesz być Ty!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <footer>
+                                <div class="row my-5 justify-content-center py-5">
+                                    <div class="col-11">
+                                        <div class="row ">
+                                            <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
+                                                <img src="{{ asset('img/logo.JPG') }}" alt="" width="450" height="220" class="d-inline-block align-top">
+                                            </div>
+                                            <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                                                <h6 class="mb-3 mb-lg-4 bold-text "><b>MENU</b></h6>
+                                                <ul class="list-unstyled">
+                                                    <li>O nas</li>
+                                                    <li>Kontakt</li>
+                                                    <li>Logowanie</li>
+                                                    <li>Rejestracja</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                                                <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>ADDRESS</b></h6>
+                                                <p class="mb-1">Nadbystrzycka 35</p>
+                                                <p>Lublin</p>
+                                            </div>
+                                        </div>
+                                        <div class="row ">
+                                            <div class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
+                                                <p class="social text-muted mb-0 pb-0 bold-text"> <span class="mx-2"><i class="fa fa-facebook" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-twitter" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-instagram" aria-hidden="true"></i></span> </p><small class="rights"><span>&#174;</span>All Rights Reserved.</small>
+                                            </div>
+
+                                            <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-2 align-self-end mt-3 ">
+                                                <h6 class="text-muted bold-text"><b>Filip Kuranda</b></h6><small><span><i class="fa fa-envelope" aria-hidden="true"></i></span> filipkurandadev@gmail.com</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
                         </div>
                     </div>
                 </article>

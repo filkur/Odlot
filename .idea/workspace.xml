@@ -20,7 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3c16f4-e089-4723-ad1c-974456046d05" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/img/adult.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/happy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/haslo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/person.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/airport2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/panorama.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -184,7 +190,8 @@
       <option name="presentableId" value="Default" />
       <updated>1608549811870</updated>
       <workItem from="1608549815090" duration="14357000" />
-      <workItem from="1608655091924" duration="9719000" />
+      <workItem from="1608655091924" duration="14758000" />
+      <workItem from="1608737359257" duration="5753000" />
     </task>
     <servers />
   </component>
@@ -211,10 +218,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="475" y="55" key="#PHP/0.0.1536.824@0.0.1536.824" timestamp="1608549941151" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1608655207729">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1608737444566">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608655207729" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1608737444566" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1608743152906">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1608743152906" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1608550116841">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
