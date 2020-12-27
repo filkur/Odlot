@@ -20,10 +20,6 @@
             .navbar{
                 font-size: 25px;
             }
-            .btn-outline-secondary{
-                margin-left: 20px;
-                border-radius: 40px;
-            }
 
             .container{
                 font-family: Bahnschrift;
@@ -32,7 +28,35 @@
             main {
                 background: linear-gradient(#ffffff,rgba(44,77,223,0));
             }
+            .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 20px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
 
+            button {
+                padding: 15px 25px;
+                text-align: center;
+                cursor: pointer;
+                outline: none;
+                color: #fff;
+                background-color: #3490dc;
+                border: none;
+            }
+
+            button:hover {
+                background-color: #636b6f;
+                color: #f8fafc;
+            }
+
+            button:active {
+                background-color: #f8fafc;
+                transform: translateY(4px);
+            }
 
         </style>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -46,26 +70,27 @@
             <header>
                 <nav class="navbar">
                     <div class="container-fluid">
-                        <a class="navbar-brand"  href="#"><img class="img-fluid" src="{{url('/img/haslo.png')}}" alt="haslo"></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                        <div class="top-left links">
+                            <a href="#"><img src="{{ asset('img/haslo.png') }}"></a>
+                        </div>
+                    @if (Route::has('login'))
+                            <div class="top-right links">
+                                @auth
+                                    <a href="{{ url('home') }}">Home</a>
+                                @else
+                                    <a href="{{ route('home') }}">O nas</a>
 
+                                    <a href="{{ route('home') }}">Kontakt</a>
 
-                        <ul class="nav justify-content-end">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">O nas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Kontakt</a>
-                            </li>
-                            <li>
-                                <button class="btn btn-sm btn-outline-secondary" type="button" style="background-color: #636b6f; color: #f8fafc; border-radius: 20px; font-size: 23px;" >Login</button>
-                            </li>
-                            <li>
-                                <button class="btn btn-sm btn-outline-secondary" type="button" style="background-color: rgba(44,81,255,0.76); color: #f8fafc; border-radius: 20px;  font-size: 23px;">Rejestracja</button>
-                            </li>
-                        </ul>
+                                    <a href="{{ route('login') }}"><button type="button">Zaloguj</button></a>
+
+                                    @if (Route::has('register'))
+                                        <a href="{{ route('register') }}"><button type="button">Rejestruj</button></a>
+                                    @endif
+                                @endauth
+                            </div>
+                        @endif
+
                     </div>
                 </nav>
             </header>
