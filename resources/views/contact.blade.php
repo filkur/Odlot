@@ -97,7 +97,74 @@
     <main>
         <article>
             <div class="container">
+                <div class="row mt-5">
+                    <section>
+                        <header>
+                            <h4>Zapraszamy do kontaktu biurem obsługi klienta:</h4>
+                        </header>
+                    <article style="margin-left: 25px">
+                        <header>
+                            <h5>Helpdesk and support</h5>
+                        </header>
+                        <p>Emilia</p>
+                        <p>Kowalska</p>
+                        <p>Tel: 111-222-333</p>
+                    </article>
+                    </section>
+                    <section>
+                        <header>
+                            <h4>Masz pytanie? napisz do nas!</h4>
+                        </header>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3">
+                                    <div class="well well-sm">
+                                        <form class="form-horizontal" action="" method="post">
+                                            <fieldset>
 
+                                                <!-- Name input-->
+                                                <div class="form-group">
+                                                    <label class="col-md-3 control-label" for="name">Imię:</label>
+                                                    <div class="col-md-9">
+                                                        <input id="name" name="name" type="text" placeholder="Twoje imię" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Email input-->
+                                                <div class="form-group">
+                                                    <label class="col-md-3 control-label" for="email">E-mail:</label>
+                                                    <div class="col-md-9">
+                                                        <input id="email" name="email" type="text" placeholder="Wpisz e-mail" class="form-control">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Message body -->
+                                                <div class="form-group">
+                                                    <label class="col-md-3 control-label" for="message">Zostaw wiadomość</label>
+                                                    <div class="col-md-9">
+                                                        <textarea class="form-control" id="message" name="message" placeholder="Zostaw swoją wiadomość tutaj..." rows="5"></textarea>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Form actions -->
+                                                <div class="form-group">
+                                                    <div class="col-md-12 text-right">
+                                                        <button type="submit" class="btn btn-primary btn-lg">Wyślij</button>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="row mt-4">
+                    <header><h2>Siedziba firmy:</h2></header>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.0365753255514!2d22.546644251409525!3d51.236821279491394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47225770b90ed75f%3A0x1b6d4cc1142112fa!2sWydzia%C5%82%20Elektrotechniki%20i%20Informatyki%20Politechniki%20Lubelskiej!5e0!3m2!1sen!2spl!4v1609081953767!5m2!1sen!2spl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
 
                 <div class="row">
                     <footer>
