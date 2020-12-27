@@ -71,16 +71,16 @@
                 <nav class="navbar">
                     <div class="container-fluid">
                         <div class="top-left links">
-                            <a href="#"><img src="{{ asset('img/haslo.png') }}"></a>
+                            <a href="{{ url('/') }}"><img src="{{ asset('img/haslo.png') }}"></a>
                         </div>
                     @if (Route::has('login'))
                             <div class="top-right links">
                                 @auth
                                     <a href="{{ url('home') }}">Home</a>
                                 @else
-                                    <a href="{{ route('home') }}">O nas</a>
+                                    <a href="{{ url('o-nas') }}">O nas</a>
 
-                                    <a href="{{ route('home') }}">Kontakt</a>
+                                    <a href="{{ url('kontakt') }}">Kontakt</a>
 
                                     <a href="{{ route('login') }}"><button type="button">Zaloguj</button></a>
 
@@ -224,18 +224,3 @@
     </body>
 </html>
 
-<!-- <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-    <div class="top-right links">
-@auth
-        <a href="{{ url('/home') }}">Home</a>
-                    @else
-        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-            <a href="{{ route('register') }}">Register</a>
-                        @endif
-    @endauth
-        </div>
-@endif
-    -->

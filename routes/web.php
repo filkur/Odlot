@@ -18,7 +18,12 @@ Route::get('/', function () {
 });
 
 Route::get('/o-nas', function (){
-    return "o nas";
+    return view('onas');
+});
+
+Route::get('/kontakt', function () {
+
+   return "kontakt";
 });
 
 Auth::routes();
