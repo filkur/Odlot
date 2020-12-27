@@ -23,7 +23,7 @@ Route::get('/o-nas', function (){
 
 Route::get('/kontakt', function () {
 
-   return "kontakt";
+    return view('contact');
 });
 
 Auth::routes();

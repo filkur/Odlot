@@ -97,11 +97,6 @@
     <main>
         <article>
             <div class="container">
-                <div class="row">
-                    <div id="firstContent">
-
-                    </div>
-                </div>
                 <div class="row" style="text-align: center; margin-top: 120px;" >
                     <section>
                         <header> <h2>Kim jesteśmy?</h2></header>
