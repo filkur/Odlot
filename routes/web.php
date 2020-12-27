@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/o-nas', function (){
-    return view('onas');
+    return view('aboutus');
 });
 
 Route::get('/kontakt', function () {
