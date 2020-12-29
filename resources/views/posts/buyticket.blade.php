@@ -68,17 +68,15 @@
             </div>
         </div>
         <script>
-            isHide = true;
+            isDisabled = false;
                 function hide(){
-                    if (isHide == true){
-                        document.getElementById('end').style.visibility = "hidden";
-                        document.getElementById('end').style.visibility = "hidden";
-                        isHide = false;
+                    if (isDisabled == true){
+                        document.getElementById('end').disabled = false;
+                        isDisabled = false;
                     }
                     else {
-                        document.getElementById('end').style.visibility = "visible";
-                        document.getElementById('end').style.visibility = "visible";
-                        isHide = true;
+                        document.getElementById('end').disabled = true;
+                        isDisabled = true;
                     }
                 }
         </script>
