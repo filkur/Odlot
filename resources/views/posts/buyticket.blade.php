@@ -15,16 +15,11 @@
                                     {{ session('status') }}
                                 </div>
                             @endif
-                            <div class="row m-3">
-                                <input type="checkbox" id="powrotny" name="powrotny"
-                                       checked class="mt-1" onclick="hide()">
-                                <label for="powrotny" class="ml-1 font-weight-bold">W dwie strony</label>
-                            </div>
 
                             <div class="row">
                                 <div class="col-md-3 mb-4 mt-1">
-                                    <label for="country" class="ml-4">Miejsce wylotu</label>
-                                    <select id="country" name="country" class="form-control">
+                                    <label for="outcome" class="ml-4">Miejsce wylotu</label>
+                                    <select id="outcome" name="outcome" class="form-control">
                                         <option value="Warszawa">Warszawa (WAW)</option>
                                         <option value="Krakow">Kraków (KRK)</option>
                                         <option value="Katowice">Katowice (KTW)</option>
@@ -38,8 +33,8 @@
                                     </select>
                                 </div>
                                 <div class="col-md-3 mb-4 mt-1">
-                                    <label for="country" class="ml-4">Miejsce przylotu</label>
-                                    <select id="country" name="country" class="form-control">
+                                    <label for="income" class="ml-4">Miejsce przylotu</label>
+                                    <select id="income" name="income" class="form-control">
                                         <option value="Warszawa">Warszawa (WAW)</option>
                                         <option value="Krakow">Kraków (KRK)</option>
                                         <option value="Katowice">Katowice (KTW)</option>
@@ -57,10 +52,13 @@
                                     <input type="date" id="start" name="trip-start"
                                            value="{{date('Y-m-d')}}" min="{{date('Y-m-d')}}" class="w-100 h-50">
                                 </div>
-                                <div class="col-md-3 mb-4">
-                                    <label for="end" class="mt-1">Powrót:</label> <br/>
-                                    <input type="date" id="end" name="trip-end"
-                                           value="{{date('Y-m-d')}}" min="{{date('Y-m-d')}}" class="w-100 h-50">
+                                <div class="col-md-3 mb-4 mt-1">
+                                    <label for="flightClass" class="ml-4">Klasa lotu:</label>
+                                    <select id="flightClass" name="flightClass" class="form-control">
+                                        <option value="business">Business</option>
+                                        <option value="standard">Standard</option>
+                                        <option value="normal">Normal</option>
+                                    </select>
                                 </div>
                                 <div class="col-12 ">
                                     <button type="submit" class="btn btn-primary">Szukaj</button>
@@ -73,19 +71,5 @@
         </form>
 
     </div>
-    <script>
-        isDisabled = false;
-        function hide(){
-            if (isDisabled == true){
-                document.getElementById('end').disabled = false;
-                isDisabled = false;
-            }
-            else {
-                document.getElementById('end').disabled = true;
-                isDisabled = true;
-            }
-        }
-    </script>
-
 
 @endsection

@@ -13,7 +13,7 @@ class BuyTicketController extends Controller
      */
     public function index()
     {
-        return view('posts.buyticket');
+        //
     }
 
     /**
@@ -35,12 +35,13 @@ class BuyTicketController extends Controller
     public function store(Request $request)
     {
         BuyTicketController::create([
-            'title' => $request-> input('title'),
+            'outcome' => $request-> input('outcome'),
+            'income' => $request->input('income'),
         ]);
 
         $title = $request->input('title');
 
-         view('posts.buyticket')->with("pipka");
+         return redirect('/kupbilet');
 
     }
 
