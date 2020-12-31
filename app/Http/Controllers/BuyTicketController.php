@@ -23,7 +23,7 @@ class BuyTicketController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.buyticket');
     }
 
     /**
@@ -34,7 +34,14 @@ class BuyTicketController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        BuyTicketController::create([
+            'title' => $request-> input('title'),
+        ]);
+
+        $title = $request->input('title');
+
+         view('posts.buyticket')->with("pipka");
+
     }
 
     /**
@@ -43,9 +50,10 @@ class BuyTicketController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
-        //
+        $soul = $request->input('title');
+        return view('posts.buyticket')->with('soul',$soul);
     }
 
     /**

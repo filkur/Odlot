@@ -31,3 +31,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/kupbilet', 'BuyTicketController@index')->name('buyticket');
+
+Route::post('/kupbilet', 'BuyTicketController@store');
+
+
+
