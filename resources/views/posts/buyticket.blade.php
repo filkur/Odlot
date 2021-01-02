@@ -18,8 +18,8 @@
 
                             <div class="row">
                                 <div class="col-md-3 mb-4 mt-1">
-                                    <label for="outcome" class="ml-4">Miejsce wylotu</label>
-                                    <select id="outcome" name="outcome" class="form-control">
+                                    <label for="arrival" class="ml-4">Miejsce wylotu</label>
+                                    <select id="arrival" name="arrival" class="form-control">
                                         <option value="Warszawa">Warszawa (WAW)</option>
                                         <option value="Krakow">Kraków (KRK)</option>
                                         <option value="Katowice">Katowice (KTW)</option>
@@ -33,8 +33,8 @@
                                     </select>
                                 </div>
                                 <div class="col-md-3 mb-4 mt-1">
-                                    <label for="income" class="ml-4">Miejsce przylotu</label>
-                                    <select id="income" name="income" class="form-control">
+                                    <label for="departure" class="ml-4">Miejsce przylotu</label>
+                                    <select id="departure" name="departure" class="form-control">
                                         <option value="Warszawa">Warszawa (WAW)</option>
                                         <option value="Krakow">Kraków (KRK)</option>
                                         <option value="Katowice">Katowice (KTW)</option>
@@ -49,7 +49,7 @@
                                 </div>
                                 <div class="col-md-3 mb-4">
                                     <label for="start" class="mt-1">Wylot:</label> <br/>
-                                    <input type="date" id="start" name="trip-start"
+                                    <input type="date" id="start" name="start"
                                            value="{{date('Y-m-d')}}" min="{{date('Y-m-d')}}" class="w-100 h-50">
                                 </div>
                                 <div class="col-md-3 mb-4 mt-1">
