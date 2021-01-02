@@ -17,12 +17,14 @@ class CreateTicketsTable extends Migration
             $table->id();
             $table->string('arrival');
             $table->string('departure');
-            $table->date('start');
+            $table->date('startDate');
+            $table->string('startHour');
             $table->string('flightClass');
             $table->string('airline');
             $table->integer('price');
             $table->timestamps();
         });
+
     }
 
     /**
