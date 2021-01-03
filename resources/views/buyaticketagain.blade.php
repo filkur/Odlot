@@ -7,7 +7,9 @@
             <div class="row justify-content-center">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header p-4"><h4>{{ __('Szukaj przelotu:') }}</h4></div><div class="card-body">
+                        <div class="card-header p-4"><h4>{{ __('Szukaj przelotu:') }}</h4></div>
+
+                        <div class="card-body">
                             @if (session('status'))
                                 <div class="alert alert-success" role="alert">
                                     {{ session('status') }}
@@ -60,6 +62,11 @@
                                 </div>
                                 <div class="col-12 ">
                                     <button type="submit" class="btn btn-primary" name="szukaj">Szukaj</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3>Nie znaleziono przelotu! Wyszukaj ponownie</h3>
                                 </div>
                             </div>
                         </div>

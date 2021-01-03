@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Ticket;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\View\View;
 
 class BuyTicketController extends Controller
 {
@@ -34,14 +37,6 @@ class BuyTicketController extends Controller
      */
     public function store(Request $request)
     {
-        BuyTicketController::create([
-            'outcome' => $request-> input('outcome'),
-            'income' => $request->input('income'),
-        ]);
-
-        $title = $request->input('title');
-
-         return redirect('/kupbilet');
 
     }
 
@@ -53,8 +48,37 @@ class BuyTicketController extends Controller
      */
     public function show(Request $request)
     {
-        $soul = $request->input('title');
-        return view('posts.buyticket')->with('soul',$soul);
+
+        $request->validate([
+            'arrival' => 'required',
+            'departure' => 'required',
+            'start' => 'required',
+            'flightClass' => 'required',
+
+        ]);
+
+        $arrival = $request['arrival'];
+        $departure = $request['departure'];
+        $start =  $request['start'];
+        $flightClass = $request['flightClass'];
+
+        $tickets = DB::table('tickets')
+            ->where('arrival', "$arrival")
+            ->where('departure', "$departure")
+            ->where('startDate', "$start")
+            ->where('flightClass', "$flightClass")
+            ->get();
+       /* foreach ($tickets as $ticket)
+        {
+            //var_dump($ticket->arrival);
+            foreach ($ticket as $item => $key)
+                echo "$key"."-";
+
+        }*/
+        if ($tickets->isEmpty())
+            return view('searchticket', ["tickets" => null ]);
+
+        return view('searchticket', ["tickets" => $tickets ]);
     }
 
     /**

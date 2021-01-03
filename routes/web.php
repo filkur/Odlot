@@ -30,9 +30,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/kupbilet/szukaj', 'BuyTicketController@create')->name('buyticket');
+Route::get('/kupbilet', 'BuyTicketController@create')->name('buyticket');
 
-Route::post('/kupbilet', 'BuyTicketController@store');
+//Route::post('/kupbilet', 'BuyTicketController@show');
+
+Route::post('/szukajbilet', 'BuyTicketController@show');
 
 
 
