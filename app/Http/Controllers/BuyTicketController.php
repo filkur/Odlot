@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Ticket;
+use App\Users_ticket;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
@@ -38,7 +40,12 @@ class BuyTicketController extends Controller
     public function store(Request $request)
     {
         $idBookedTicket = $request["rezerwuj"];
+       DB::table('users_tickets')->insert([
+           'user_id' => Auth::id(),
+           'ticket_id'=> $idBookedTicket,
+       ]);
 
+        return ('kupiony');
     }
 
     /**
