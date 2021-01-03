@@ -68,13 +68,7 @@ class BuyTicketController extends Controller
             ->where('startDate', "$start")
             ->where('flightClass', "$flightClass")
             ->get();
-       /* foreach ($tickets as $ticket)
-        {
-            //var_dump($ticket->arrival);
-            foreach ($ticket as $item => $key)
-                echo "$key"."-";
 
-        }*/
         if ($tickets->isEmpty())
             return view('searchticket', ["tickets" => null ]);
 

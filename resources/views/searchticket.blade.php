@@ -5,7 +5,17 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header p-4"><h4>{{ __('Znaleziono bilet:') }}</h4></div><div class="card-body">
+                    <div class="card-header p-4"><h4>{{ __('Wynik wyszukiwania:') }}</h4></div><div class="row mt-4 ml-1" >
+                        <div class="col"><h5>#Id<br> lotu:</h5></div>
+                        <div class="col"><h5>Miejsce wylotu:</h5></div>
+                        <div class="col"><h5>Miejsce docelowe:</h5></div>
+                        <div class="col"><h5>Start:</h5></div>
+                        <div class="col"><h5>Godz.:</h5></div>
+                        <div class="col"><h5>Klasa:</h5></div>
+                        <div class="col"><h5>Linia:</h5></div>
+                        <div class="col"><h5>Cena [zł]:</h5></div>
+                        <div class="col"><h5></h5></div>
+                    </div><div class="card-body">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
@@ -15,11 +25,17 @@
                                 @if($tickets === null)
                                     <div class="col-md-3 mb-4 mt-1">Nie znaleziono biletów</div>
                                 @else
-                                    @foreach($tickets as $ticket)
-                                        @foreach($ticket as $item => $key)
-                                            <div class="col-md-2 mb-4 mt-1">{{$key}}</div>
+
+                                    <div class="row mt-4">
+                                        @foreach($tickets as $ticket)
+                                            @foreach($ticket as $item => $key)
+                                                <div class="col"><h4>{{$key}}</h4></div>
+                                            @endforeach
+                                                <div class="col">
+                                                    <button type="submit" class="btn btn-primary" name="rezerwuj">Rezerwuj</button>
+                                                </div>
                                         @endforeach
-                                    @endforeach
+                                    </div>
                                 @endif
                             </div>
 
