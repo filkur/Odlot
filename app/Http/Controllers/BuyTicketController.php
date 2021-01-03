@@ -37,7 +37,10 @@ class BuyTicketController extends Controller
      */
     public function store(Request $request)
     {
-
+        if (session()->has('data')){
+            $data = session('data');
+            var_dump($data);
+        }
     }
 
     /**
@@ -68,11 +71,12 @@ class BuyTicketController extends Controller
             ->where('startDate', "$start")
             ->where('flightClass', "$flightClass")
             ->get();
-
-        if ($tickets->isEmpty())
+        echo $tickets;
+       /*if ($tickets->isEmpty())
             return view('searchticket', ["tickets" => null ]);
-
+        session()->put('data', $tickets);
         return view('searchticket', ["tickets" => $tickets ]);
+    */
     }
 
     /**

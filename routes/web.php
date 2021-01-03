@@ -36,5 +36,7 @@ Route::get('/kupbilet', 'BuyTicketController@create')->name('buyticket');
 
 Route::post('/szukajbilet', 'BuyTicketController@show');
 
+Route::post('/kupiony', 'BuyTicketController@store');
+
 
 
