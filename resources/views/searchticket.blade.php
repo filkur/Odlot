@@ -24,19 +24,17 @@
                                 </div>
                             @endif
                                 <div class="row">
-                                    @if($tickets === null)
+                                    @if($ticket === null)
                                         <div class="col-md-3 mb-4 mt-1">Nie znaleziono biletów</div>
                                     @else
 
                                         <div class="row mt-4">
-                                            @foreach($tickets as $ticket)
                                                 @foreach($ticket as $item => $key)
                                                     <div class="col"><h4>{{$key}}</h4></div>
                                                 @endforeach
                                                     <div class="col">
-                                                        <button type="submit" class="btn btn-primary" name="rezerwuj ">Rezerwuj</button>
+                                                        <button type="submit" class="btn btn-primary" name="rezerwuj" value={{$ticket->id}}>Rezerwuj</button>
                                                     </div>
-                                            @endforeach
                                         </div>
                                     @endif
                                 </div>

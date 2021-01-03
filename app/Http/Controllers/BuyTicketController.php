@@ -37,10 +37,8 @@ class BuyTicketController extends Controller
      */
     public function store(Request $request)
     {
-        if (session()->has('data')){
-            $data = session('data');
-            var_dump($data);
-        }
+        $idBookedTicket = $request["rezerwuj"];
+
     }
 
     /**
@@ -65,18 +63,23 @@ class BuyTicketController extends Controller
         $start =  $request['start'];
         $flightClass = $request['flightClass'];
 
-        $tickets = DB::table('tickets')
+       /* $tickets = DB::table('tickets')
             ->where('arrival', "$arrival")
             ->where('departure', "$departure")
             ->where('startDate', "$start")
             ->where('flightClass', "$flightClass")
             ->get();
-        echo $tickets;
-       /*if ($tickets->isEmpty())
-            return view('searchticket', ["tickets" => null ]);
-        session()->put('data', $tickets);
-        return view('searchticket', ["tickets" => $tickets ]);
-    */
+        echo $tickets;*/
+
+        $ticket = DB::table('tickets')
+            ->where('arrival', "$arrival")
+            ->where('departure', "$departure")
+            ->where('startDate', "$start")
+            ->where('flightClass', "$flightClass")
+            ->first();
+
+        return view('searchticket', ["ticket" => $ticket ]);
+
     }
 
     /**
