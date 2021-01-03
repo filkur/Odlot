@@ -21,7 +21,7 @@
                                         <p class="card-text">Przejdź za pomocą przycisku poniżej lub wybierz z menu zakładkę kup bilet a następnie wypełnij formularz aby wyszukać wymarzonego lotu.</p>
                                     </div>
                                     <div class="card-footer">
-                                        <a href="#" class="btn btn-primary btn-sm">Przejdź do formularza</a>
+                                        <a href="{{route('buyticket')}}" class="btn btn-primary btn-sm">Przejdź do formularza</a>
                                     </div>
                                 </div>
                             </div>

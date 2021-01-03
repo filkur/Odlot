@@ -45,7 +45,7 @@ class BuyTicketController extends Controller
            'ticket_id'=> $idBookedTicket,
        ]);
 
-        return ('kupiony');
+        return view('bookticket');
     }
 
     /**
