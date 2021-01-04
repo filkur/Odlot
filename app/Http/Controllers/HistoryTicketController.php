@@ -17,8 +17,6 @@ class HistoryTicketController extends Controller
      */
     public function index()
     {
-        $user = Auth::user()->name;
-        echo "$user";
         $ticketsID = DB::table('users_tickets')
             ->where('user_id', Auth::id())
             ->get('ticket_id');
@@ -32,16 +30,16 @@ class HistoryTicketController extends Controller
             }
         }
 
-        $arrayTicket = [];
+        $arrayTickets = [];
 
         for ($i=0; $i<count($arrayTicketId); $i++){
-            $arrayTicket[$i] = DB::table('tickets')
+            $arrayTickets[$i] = DB::table('tickets')
                 ->where('id', $arrayTicketId[$i])
                 ->first();
         }
 
 
-        return view('history');
+        return view('history', ["tickets" => $arrayTickets]);
     }
 
     /**
