@@ -66,7 +66,7 @@
                                     <a class="dropdown-item" href="#">
                                         {{__('Wypożyczalnia')}}
                                     </a>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="{{route('edit')}}">
                                         {{__('Edycja')}}
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"

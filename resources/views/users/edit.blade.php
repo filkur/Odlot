@@ -1,0 +1,33 @@
+@extends('layouts.app')
+
+@section('content')
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h3>Edytuj profil:</h3>
+            </div>
+            <form method="post" action="/profil">
+                @csrf
+                <div class="card-body">
+                    Login: <div class="col mb-3"><input type="text" name="name" placeholder="{{Auth::user()->name}}"/></div>
+                    E-mail: <div class="col mb-3"><input type="text" name="email" placeholder="{{Auth::user()->email}}"/></div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-primary" >Edytuj dane</button>
+                    </div>
+                </div>
+
+            </form>
+            @if ($errors->any())
+                <div style="color: red;">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+        </div>
+    </div>
+
+@endsection

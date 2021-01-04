@@ -40,5 +40,10 @@ Route::post('/kupiony', 'BuyTicketController@store');
 
 Route::get('/historia', 'HistoryTicketController@index')->name('history');
 
+Route::get('/profil', 'UserController@index')->name('edit');
+
+Route::post('/profil', 'UserController@store');
+
+
 
 
