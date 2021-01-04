@@ -26,6 +26,9 @@
                                 <div class="row">
                                     @if($ticket === null)
                                         <div class="col-md-3 mb-4 mt-1">Nie znaleziono biletów</div>
+                                        <div class="col-12">
+                                            <a href="{{route('buyticket')}}" class="btn btn-primary btn-sm">Powrót</a>
+                                        </div>
                                     @else
 
                                         <div class="row mt-4">
