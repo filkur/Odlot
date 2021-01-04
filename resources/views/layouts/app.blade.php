@@ -63,9 +63,7 @@
                                     <a class="dropdown-item" href="{{route('history')}}">
                                         {{__('Historia')}}
                                     </a>
-                                    <a class="dropdown-item" href="#">
-                                        {{__('Wypożyczalnia')}}
-                                    </a>
+
                                     <a class="dropdown-item" href="{{route('edit')}}">
                                         {{__('Edycja')}}
                                     </a>

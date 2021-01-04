@@ -15,7 +15,12 @@
                     <div class="col">
                         <button type="submit" class="btn btn-primary" >Edytuj dane</button>
                     </div>
+
+                    <div class="col mt-4">
+                        <button type="submit" class="btn btn-dark" name="delete" value="delete" >Usuń konto</button>
+                    </div>
                 </div>
+
 
             </form>
             @if ($errors->any())

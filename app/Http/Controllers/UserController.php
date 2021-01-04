@@ -36,6 +36,11 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
+        if ($request['delete'])
+        {
+            return $this->destroy(Auth::id());
+        }
+
         $request->validate([
             'name' => 'required',
             'email' => 'required',
@@ -93,6 +98,9 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+
+        DB::table('users')->where('id', $id)->delete();
+        return redirect()->to('/');
+
     }
 }

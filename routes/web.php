@@ -32,8 +32,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/kupbilet', 'BuyTicketController@create')->name('buyticket');
 
-//Route::post('/kupbilet', 'BuyTicketController@show');
-
 Route::post('/szukajbilet', 'BuyTicketController@show');
 
 Route::post('/kupiony', 'BuyTicketController@store');

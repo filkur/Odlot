@@ -41,11 +41,10 @@
                             <div class="col-md-4 mb-5">
                                 <div class="card h-100">
                                     <div class="card-body">
-                                        <h2 class="card-title">Wypożyczalnia</h2>
-                                        <p class="card-text">Przejdź do naszej wypożyczalni aby za pomocą jednego formularza skorzystać z naszej floty aut, a nastepnie przemieszczać się wygodnie w miejscu podróży.</p>
-                                    </div>
+                                        <h2 class="card-title">Edycja</h2>
+                                        <p class="card-text">Nie podoba Ci sie Twój obecny nick bądź zmieniłeś e-mail? Bez obaw, wciśnij przycisk poniżej i edytuj dane</div>
                                     <div class="card-footer">
-                                        <a href="#" class="btn btn-primary btn-sm">Zobacz możliwości</a>
+                                        <a href="{{route('edit')}}" class="btn btn-primary btn-sm">Edytuj profil</a>
                                     </div>
                                 </div>
                             </div>
