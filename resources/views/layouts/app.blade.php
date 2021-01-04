@@ -60,7 +60,7 @@
                                     <a class="dropdown-item" href={{route('buyticket')}}>
                                         {{__('Kup bilet')}}
                                     </a>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="{{route('history')}}">
                                         {{__('Historia')}}
                                     </a>
                                     <a class="dropdown-item" href="#">

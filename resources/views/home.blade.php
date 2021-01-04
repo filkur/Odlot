@@ -33,7 +33,7 @@
                                         <p class="card-text">Masz dosyć szukania biletów na skrzynce mailowej? Kliknij w historię a pokażą się wszystkie zakupione u nas bilety.</p>
                                     </div>
                                     <div class="card-footer">
-                                        <a href="#" class="btn btn-primary btn-sm">Zobacz historię</a>
+                                        <a href="{{route('history')}}" class="btn btn-primary btn-sm">Zobacz historię</a>
                                     </div>
                                 </div>
                             </div>
