@@ -9,56 +9,8 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://    fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
-
         <!-- Styles -->
-        <style>
-            .container-fluid{
-                font-family: 'Noto Serif', serif;
-                max-width: 1400px;
-            }
-            .navbar{
-                font-size: 25px;
-            }
-
-            .container{
-                font-family: Bahnschrift;
-            }
-
-            main {
-                background: linear-gradient(#ffffff,rgba(44,77,223,0));
-            }
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 20px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            button {
-                padding: 15px 25px;
-                text-align: center;
-                cursor: pointer;
-                outline: none;
-                color: #fff;
-                background-color: #3490dc;
-                border: none;
-            }
-
-            button:hover {
-                background-color: #636b6f;
-                color: #f8fafc;
-            }
-
-            button:active {
-                background-color: #f8fafc;
-                transform: translateY(4px);
-            }
-
-        </style>
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     </head>
     <body>
@@ -68,35 +20,55 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
         <div class="container-fluid" >
             <header>
-                <nav class="navbar">
-                    <div class="container-fluid">
-                        <div class="top-left links">
-                            <a href="{{ url('/') }}"><img src="{{ asset('img/haslo.png') }}"></a>
+                <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+                    <div class="container">
+                        <a class="navbar-brand" href="{{url('/')}}">
+                            <img src="{{ asset('img/haslo.png') }}"alt="logo" >
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <!-- Left Side Of Navbar -->
+
+                            <ul class="navbar-nav mr-auto">
+
+                            </ul>
+
+                            <!-- Right Side Of Navbar -->
+                            <ul class="navbar-nav ml-auto">
+                                <!-- Authentication Links -->
+                                @if (Route::has('login'))
+                                    @auth
+                                        <li class="nav-item">
+                                            <a href="{{ url('home') }}">Home</a>
+                                        </li>
+                                    @else
+                                        <li class="nav-item" style="margin-top: 20px;">
+                                            <a href="{{ url('o-nas') }}" style="text-decoration: none; margin-right: 50px; font-size: 25px">O nas</a>
+                                        </li>
+                                        <li class="nav-item" style="margin-top: 20px;">
+                                            <a href="{{ url('kontakt') }}" style="text-decoration: none; margin-right: 50px; font-size: 25px">Kontakt</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{{ route('login') }}"><button type="button">Zaloguj</button></a>
+                                        </li>
+                                        @if (Route::has('register'))
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ route('register') }}"><button type="button">Rejestruj</button></a>
+                                            </li>
+                                        @endif
+                                    @endauth
+                                @endif
+                            </ul>
                         </div>
-                    @if (Route::has('login'))
-                            <div class="top-right links">
-                                @auth
-                                    <a href="{{ url('home') }}">Home</a>
-                                @else
-                                    <a href="{{ url('o-nas') }}">O nas</a>
-
-                                    <a href="{{ url('kontakt') }}">Kontakt</a>
-
-                                    <a href="{{ route('login') }}"><button type="button">Zaloguj</button></a>
-
-                                    @if (Route::has('register'))
-                                        <a href="{{ route('register') }}"><button type="button">Rejestruj</button></a>
-                                    @endif
-                                @endauth
-                            </div>
-                        @endif
-
                     </div>
                 </nav>
             </header>
             <main>
                 <article>
-                    <div class="container">
+                    <div class="container mt-4">
                         <div class="row">
                            <div id="firstContent">
                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
