@@ -38,5 +38,7 @@ Route::post('/szukajbilet', 'BuyTicketController@show');
 
 Route::post('/kupiony', 'BuyTicketController@store');
 
+Route::get('/history', 'HistoryTicketController@index');
+
 
 
