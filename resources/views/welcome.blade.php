@@ -23,7 +23,7 @@
                 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                     <div class="container">
                         <a class="navbar-brand" href="{{url('/')}}">
-                            <img src="{{ asset('img/haslo.png') }}"alt="logo" >
+                            <img src="{{ asset('img/haslo.png') }}" alt="logo" >
                         </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                             <span class="navbar-toggler-icon"></span>
@@ -45,18 +45,18 @@
                                             <a href="{{ url('home') }}">Home</a>
                                         </li>
                                     @else
-                                        <li class="nav-item" style="margin-top: 20px;">
+                                        <li class="nav-item" style="margin-top: 15px;">
                                             <a href="{{ url('o-nas') }}" style="text-decoration: none; margin-right: 50px; font-size: 25px">O nas</a>
                                         </li>
-                                        <li class="nav-item" style="margin-top: 20px;">
+                                        <li class="nav-item" style="margin-top: 15px;">
                                             <a href="{{ url('kontakt') }}" style="text-decoration: none; margin-right: 50px; font-size: 25px">Kontakt</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="{{ route('login') }}"><button type="button">Zaloguj</button></a>
+                                        <li class="nav-item mr-3">
+                                            <a class="btn btn-primary btn-lg" href="{{ route('login') }}">Zaloguj</a>
                                         </li>
                                         @if (Route::has('register'))
                                             <li class="nav-item">
-                                                <a class="nav-link" href="{{ route('register') }}"><button type="button">Rejestruj</button></a>
+                                                <a class="btn btn-primary btn-lg" href="{{ route('register') }}">Rejestruj</a>
                                             </li>
                                         @endif
                                     @endauth
