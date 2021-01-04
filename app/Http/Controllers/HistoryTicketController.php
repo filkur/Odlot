@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Ticket;
+use App\Users_ticket;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class HistoryTicketController extends Controller
 {
@@ -13,6 +17,30 @@ class HistoryTicketController extends Controller
      */
     public function index()
     {
+        $user = Auth::user()->name;
+        echo "$user";
+        $ticketsID = DB::table('users_tickets')
+            ->where('user_id', Auth::id())
+            ->get('ticket_id');
+
+        $arrayTicketId = [];
+        foreach ($ticketsID as $ticketId)
+        {
+            foreach ($ticketId as $item => $key)
+            {
+                array_push($arrayTicketId, $key);
+            }
+        }
+
+        $arrayTicket = [];
+
+        for ($i=0; $i<count($arrayTicketId); $i++){
+            $arrayTicket[$i] = DB::table('tickets')
+                ->where('id', $arrayTicketId[$i])
+                ->first();
+        }
+
+
         return view('history');
     }
 
