@@ -4,7 +4,7 @@
     @if(Auth::check())
         <div class="container">
             <form action='/szukajbilet' method='post'>
-                @csrfy
+                @csrf
                 <div class="row justify-content-center">
                     <div class="col-md-12">
                         <div class="card">

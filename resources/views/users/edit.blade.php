@@ -2,6 +2,7 @@
 
 @section('content')
 
+    @if(Auth::check())
     <div class="container">
         <div class="card">
             <div class="card-header">
@@ -34,5 +35,13 @@
             @endif
         </div>
     </div>
+    @else
+        <div class="container">
+            <div class="card-header">
+                Zaloguj się aby skorzystać z tej funkcji
+            </div>
+        </div>
+    @endif
+
 
 @endsection
