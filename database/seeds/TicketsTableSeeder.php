@@ -12,13 +12,25 @@ class TicketsTableSeeder extends Seeder
     public function run()
     {
         \Illuminate\Support\Facades\DB::table('tickets')->insert([
-            'arrival' => 'Warszawa (WAW)',
-            'departure' => 'Lublin (LUZ)',
-            'startDate' => date('2021-02-01-20-00'),
+            'arrival' => 'Warszawa',
+            'departure' => 'Lublin',
+            'startDate' => date('2021-02-01'),
             'startHour' => '19:00',
             'flightClass' => 'Standard',
             'airline' => 'Linia lotnicza',
             'price' => '570'
         ]);
+
+        \Illuminate\Support\Facades\DB::table('tickets')->insert([
+            'arrival' => 'Lublin',
+            'departure' => 'Warszawa',
+            'startDate' => date('2021-02-03'),
+            'startHour' => '20:00',
+            'flightClass' => 'Business',
+            'airline' => 'Airlines',
+            'price' => '1020'
+        ]);
     }
+
+
 }
