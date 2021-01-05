@@ -22,9 +22,15 @@
             <header>
                 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                     <div class="container">
-                        <a class="navbar-brand" href="{{url('/')}}">
+                        @if (Auth::check())
+                        <a class="navbar-brand" href="{{url('home')}}">
                             <img src="{{ asset('img/haslo.png') }}" alt="logo" >
                         </a>
+                        @else
+                            <a class="navbar-brand" href="{{url('/')}}">
+                                <img src="{{ asset('img/haslo.png') }}" alt="logo" >
+                            </a>
+                        @endif
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -42,7 +48,7 @@
                                 @if (Route::has('login'))
                                     @auth
                                         <li class="nav-item">
-                                            <a href="{{ url('home') }}">Home</a>
+                                            <a href="{{ url('home') }}" style="text-decoration: none; margin-right: 50px; font-size: 25px">przejdź do serwisu</a>
                                         </li>
                                     @else
                                         <li class="nav-item" style="margin-top: 15px;">
