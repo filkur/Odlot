@@ -19,6 +19,7 @@
             </div>
 
             <div class="card-body">
+                @if($tickets != null)
                     @foreach($tickets as $ticket)
                     <div class="row mt-4 border-bottom">
                         @foreach($ticket as $item => $key)
@@ -26,6 +27,9 @@
                         @endforeach
                     </div>
                     @endforeach
+                @else
+                    Nie zakupiono jeszcze żadnego biletu
+                @endif
             </div>
         </div>
     </div>
