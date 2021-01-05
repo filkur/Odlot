@@ -5,7 +5,6 @@
         <form action='/kupiony' method='post'>
             @csrf
             <div class="row justify-content-center">
-                <form class="col-md-12">
                     <div class="card">
                         <div class="card-header p-4"><h4>{{ __('Wynik wyszukiwania:') }}</h4></div><div class="row mt-4 ml-1" >
                             <div class="col"><h5>#Id<br> lotu:</h5></div>
@@ -17,7 +16,8 @@
                             <div class="col"><h5>Linia:</h5></div>
                             <div class="col"><h5>Cena [zł]:</h5></div>
                             <div class="col"><h5></h5></div>
-                        </div><div class="card-body">
+                        </div>
+                        <div class="card-body">
                             @if (session('status'))
                                 <div class="alert alert-success" role="alert">
                                     {{ session('status') }}
@@ -38,12 +38,14 @@
                                                     <div class="col">
                                                         <button type="submit" class="btn btn-primary" name="rezerwuj" value={{$ticket->id}}>Rezerwuj</button>
                                                     </div>
+
                                         </div>
                                     @endif
                                 </div>
 
                     </div>
                 </div>
-            </form>
         </div>
+        </form>
+    </div>
 @endsection
