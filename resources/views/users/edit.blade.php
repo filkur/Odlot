@@ -12,7 +12,7 @@
                 @csrf
                 <div class="card-body">
                     Login: <div class="col mb-3"><input type="text" name="name" placeholder="{{Auth::user()->name}}"/></div>
-                    E-mail: <div class="col mb-3"><input type="text" name="email" placeholder="{{Auth::user()->email}}"/></div>
+                    E-mail: <div class="col mb-3"><input type="email" name="email" placeholder="{{Auth::user()->email}} "/></div>
                     <div class="col">
                         <button type="submit" class="btn btn-primary" >Edytuj dane</button>
                     </div>
