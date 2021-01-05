@@ -161,17 +161,17 @@
                                             <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
                                                 <img src="{{ asset('img/logo.JPG') }}" alt="" width="450" height="220" class="d-inline-block align-top">
                                             </div>
-                                            <div class="col-xl-2 col-md-4 col-sm-4 col-12">
+                                            <div class="col-xl-2 col-md-12 col-sm-12 col-12">
                                                 <h6 class="mb-3 mb-lg-4 bold-text "><b>MENU</b></h6>
                                                 <ul class="list-unstyled">
-                                                    <li>O nas</li>
-                                                    <li>Kontakt</li>
-                                                    <li>Logowanie</li>
-                                                    <li>Rejestracja</li>
+                                                    <li><a href="{{ url('o-nas') }}" style="text-decoration: none; color: #000000;">O nas</a></li>
+                                                    <li><a href="{{ url('o-nas') }}" style="text-decoration: none; color: #000000">Kontakt</a></li>
+                                                    <li><a href="{{ url('login') }}" style="text-decoration: none; color: #000000">Logowanie</a></li>
+                                                    <li><a href="{{ url('register') }}" style="text-decoration: none; color: #000000">Rejestracja</a></li>
                                                 </ul>
                                             </div>
                                             <div class="col-xl-2 col-md-4 col-sm-4 col-12">
-                                                <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>ADDRESS</b></h6>
+                                                <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>Adres</b></h6>
                                                 <p class="mb-1">Nadbystrzycka 35</p>
                                                 <p>Lublin</p>
                                             </div>
